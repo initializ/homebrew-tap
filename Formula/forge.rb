@@ -5,21 +5,21 @@
 class Forge < Formula
   desc "Forge is a secure, portable AI Agent runtime. Run agents locally, in cloud, or enterprise environments without exposing inbound tunnels."
   homepage "https://github.com/initializ/forge"
-  version "0.18.1"
+  version "0.19.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/initializ/forge/releases/download/v0.18.1/forge-Darwin-x86_64.tar.gz"
-      sha256 "dce1bb28f94672f12cf040cddb354c15ecb8003361989e90a511e3bf48ccce64"
+      url "https://github.com/initializ/forge/releases/download/v0.19.0/forge-Darwin-x86_64.tar.gz"
+      sha256 "b29eeb5e2a933d7596f4d5c93dbc874dee06c7ad68882ecbd1e727ee012e6316"
 
       define_method(:install) do
         bin.install "forge"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/initializ/forge/releases/download/v0.18.1/forge-Darwin-arm64.tar.gz"
-      sha256 "00ce9bce52df9ff305f973b377c2e5724d23bceac859c3cc2e83b8c92567006f"
+      url "https://github.com/initializ/forge/releases/download/v0.19.0/forge-Darwin-arm64.tar.gz"
+      sha256 "9fc37fbdf77168ffda1d675fd90661f37b95c4c1451f8394523f353ecece69c6"
 
       define_method(:install) do
         bin.install "forge"
@@ -29,15 +29,15 @@ class Forge < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/initializ/forge/releases/download/v0.18.1/forge-Linux-x86_64.tar.gz"
-      sha256 "bb7f3cea7e41b5a20f6dc94f76d607669c3526257614f527036663a98932cd84"
+      url "https://github.com/initializ/forge/releases/download/v0.19.0/forge-Linux-x86_64.tar.gz"
+      sha256 "7ed76bd540cf98bebda202d9d3d9380270ed226af0491804f912f94a0a72ab0a"
       define_method(:install) do
         bin.install "forge"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/initializ/forge/releases/download/v0.18.1/forge-Linux-arm64.tar.gz"
-      sha256 "ad6fd61db85b134204e7e1b7154530a5db0e275fd5528ae9d2dbcf3ecd3cc8ee"
+      url "https://github.com/initializ/forge/releases/download/v0.19.0/forge-Linux-arm64.tar.gz"
+      sha256 "e8cd4c58d64892bce862d56ba328d5423d1bb3d9eca0854109671754723a4a3f"
       define_method(:install) do
         bin.install "forge"
       end
