@@ -5,20 +5,20 @@
 class Initializ < Formula
   desc "Initializ platform CLI for CI pipelines"
   homepage "https://initializ.ai"
-  version "0.3.3"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/initializ/cli/releases/download/v0.3.3/initializ_darwin_amd64.tar.gz"
-      sha256 "a0d8ed6b0119a20cf6bd9369b4c0d378bfda836e3714c75835bc0e0dc0248ff4"
+      url "https://github.com/initializ/cli/releases/download/v0.4.0/initializ_darwin_amd64.tar.gz"
+      sha256 "6a6a5a8d70524c6cd460bd83f84dc6340f5fb6e1dadb344bf343c8975f3887bd"
 
       define_method(:install) do
         bin.install "initializ"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/initializ/cli/releases/download/v0.3.3/initializ_darwin_arm64.tar.gz"
-      sha256 "8635a431fe15efefa49bbd8eea978c957ae1588f7a8094177e38938ba753609f"
+      url "https://github.com/initializ/cli/releases/download/v0.4.0/initializ_darwin_arm64.tar.gz"
+      sha256 "5a8482be189de5f5063d7fdf32549be175381e7b5cd5c016bac0282a224b19e4"
 
       define_method(:install) do
         bin.install "initializ"
@@ -28,15 +28,15 @@ class Initializ < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/initializ/cli/releases/download/v0.3.3/initializ_linux_amd64.tar.gz"
-      sha256 "b45486a16ca32ab430ffef49988454c6e0f517b1828cacf4706014049b451b90"
+      url "https://github.com/initializ/cli/releases/download/v0.4.0/initializ_linux_amd64.tar.gz"
+      sha256 "b3034f7bfc42833775185d2dff4768f767b6fdf6c065d03fbe8347d8cd707327"
       define_method(:install) do
         bin.install "initializ"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/initializ/cli/releases/download/v0.3.3/initializ_linux_arm64.tar.gz"
-      sha256 "0ffeeba44d644c5af0105a81ae0192d5cf3f74e3a80bc4b3d5833878af20cd36"
+      url "https://github.com/initializ/cli/releases/download/v0.4.0/initializ_linux_arm64.tar.gz"
+      sha256 "f24ace6a312e86728dc0e1efdd9e9fd8eee53f55416231df925662d88c3ca0cf"
       define_method(:install) do
         bin.install "initializ"
       end
